@@ -1,153 +1,143 @@
-import Link from "next/link";
+import HeroBand from "@/components/shared/HeroBand";
+import CtaBand from "@/components/shared/CtaBand";
+
+const serviceTiles = [
+  {
+    name: "Access Control Systems",
+    desc: "Keycard, biometric, remote access for any property size",
+    icon: "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z",
+  },
+  {
+    name: "Video Surveillance (CCTV)",
+    desc: "HD cameras, indoor/outdoor, cloud and local storage",
+    icon: "M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
+  },
+  {
+    name: "Intercom & Entry Systems",
+    desc: "Audio/video intercoms, multi-tenant, IP-based systems",
+    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+  },
+  {
+    name: "System Integration & Upgrades",
+    desc: "Seamless integration of existing and new systems",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+  },
+  {
+    name: "Troubleshooting & Repairs",
+    desc: "Diagnostics, emergency response, hardware fixes",
+    icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z",
+  },
+  {
+    name: "Ongoing Support & Maintenance",
+    desc: "Annual plans, preventive inspections, software updates",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+  },
+];
+
+const whyCards = [
+  { num: "01", title: "Experience & Expertise", desc: "10+ years of industry knowledge. High-level technical professionalism on every project." },
+  { num: "02", title: "End-to-End Solutions", desc: "From consultation and design to installation and ongoing support — complete turnkey security." },
+  { num: "03", title: "Customized Approach", desc: "No two properties are the same. Solutions tailored to your specific operational needs and budget." },
+  { num: "04", title: "Quality & Reliability", desc: "We partner with leading manufacturers for durable, scalable, high-performance installations." },
+  { num: "05", title: "Client-Focused Service", desc: "Responsive support at every stage — from project execution to post-installation peace of mind." },
+];
 
 export default function About() {
   return (
     <div className="bg-white">
-      <section className="bg-[#1B3FA0] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-center">About ASM Security Integrators</h1>
-          <p className="text-xl text-center mt-4 text-blue-200">
-            Your trusted partner for access control, CCTV, and intercom solutions
+      <HeroBand
+        eyebrow="About ASM Security Integrators"
+        title="Trusted Security Solutions for "
+        accentWord="Businesses & Homes"
+        subtitle="Your trusted partner for access control, CCTV surveillance, intercom systems, and integrated building security — serving NJ & NY for over a decade."
+      />
+
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px]">
+        <div className="bg-white px-8 sm:px-12 py-14">
+          <p className="text-[#1B3FA0] text-[10px] font-extrabold tracking-[3px] uppercase mb-2">About Our Company</p>
+          <h2 className="text-[#0f172a] text-3xl font-black mb-5">We Create Secure Environments</h2>
+          <p className="text-slate-500 text-sm leading-relaxed mb-4">
+            ASM Security Integrators is a trusted provider of advanced security solutions, specializing in access control systems, CCTV surveillance, intercom systems, and integrated building security services. We are committed to protecting businesses, residential properties, and assets through reliable, technology-driven solutions tailored to each client&apos;s needs.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-[#1B3FA0] uppercase tracking-wider text-sm font-semibold">About Our Company</span>
-              <h2 className="text-4xl font-bold mt-2 mb-6 text-gray-900">
-                We Create Secure Environments
-              </h2>
-              <p className="text-gray-600 mb-4">
-                ASM Security Integrators is a trusted provider of advanced security solutions, specializing in access control systems, CCTV surveillance, intercom systems, and integrated building security services. We are committed to protecting businesses, residential properties, and assets through reliable, technology-driven solutions tailored to each client&apos;s needs.
-              </p>
-              <p className="text-gray-600 mb-6">
-                Our mission is to design and deliver secure, efficient, and scalable security systems that enhance safety and provide peace of mind. By leveraging industry-leading technology and best practices, we help our clients maintain full control and visibility over their properties.
-              </p>
-              <div className="flex items-center gap-4 p-6 bg-blue-50 rounded-lg">
-                <div className="text-[#1B3FA0]">
-                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600">Call us anytime</p>
-                  <a href="tel:+16469381436" className="text-3xl font-bold text-gray-900 hover:text-[#1B3FA0] transition-colors">
-                    (646) 938-1436
-                  </a>
-                </div>
-              </div>
+          <p className="text-slate-500 text-sm leading-relaxed mb-8">
+            Our mission is to design and deliver secure, efficient, and scalable security systems that enhance safety and provide peace of mind. By leveraging industry-leading technology and best practices, we help our clients maintain full control and visibility over their properties.
+          </p>
+          <div className="flex items-center gap-4 bg-[#f0f4ff] border-l-4 border-[#1B3FA0] rounded-r-lg px-5 py-4">
+            <div className="w-10 h-10 bg-[#1B3FA0] rounded-lg flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
             </div>
             <div>
-              <div className="bg-[#1B3FA0] rounded-2xl p-12 text-white text-center shadow-2xl">
-                <div className="text-8xl font-bold mb-4">10+</div>
-                <p className="text-2xl font-semibold">Years of Experience</p>
-                <p className="text-blue-200 mt-4">
-                  Over a decade of securing businesses and homes across New Jersey and New York
-                </p>
-              </div>
+              <p className="text-slate-500 text-xs mb-1">Call us anytime</p>
+              <a href="tel:+16469381436" className="text-[#0f172a] text-xl font-black hover:text-[#1B3FA0] transition-colors">(646) 938-1436</a>
             </div>
           </div>
         </div>
-      </section>
+        <div className="bg-[#1B3FA0] flex flex-col items-center justify-center text-center px-8 py-14 min-h-[300px]">
+          <p className="text-white text-8xl font-black leading-none mb-2">10+</p>
+          <p className="text-white text-lg font-bold mb-3">Years of Experience</p>
+          <p className="text-white/60 text-sm max-w-[200px] leading-relaxed">Over a decade securing businesses and homes across New Jersey and New York</p>
+          <span className="mt-5 inline-block bg-white/15 border border-white/30 text-white text-xs font-semibold px-4 py-1.5 rounded-full">✓ Trusted by 300+ Clients</span>
+        </div>
+      </div>
 
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[#1B3FA0] uppercase tracking-wider text-sm font-semibold">What We Offer</span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of security services, including the design, installation, configuration, and maintenance of:
-            </p>
+      <div className="bg-[#0f172a] px-8 sm:px-12 py-14">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between border-b border-white/[0.06] pb-5 mb-7">
+            <div>
+              <p className="text-white text-xl font-black">Our Services</p>
+              <p className="text-slate-500 text-xs mt-1">Design · Installation · Configuration · Maintenance</p>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { title: "Access Control Systems", icon: "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" },
-              { title: "Video Surveillance (CCTV) Systems", icon: "M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" },
-              { title: "Intercom and Entry Systems", icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" },
-              { title: "System Integration and Upgrades", icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" },
-              { title: "Troubleshooting and Repairs", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" },
-              { title: "Ongoing Support and Maintenance", icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 p-6 bg-blue-50 rounded-lg">
-                <div className="w-10 h-10 bg-[#1B3FA0] rounded-lg flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {serviceTiles.map((tile) => (
+              <div key={tile.name} className="bg-[#1e293b] border border-[rgba(27,63,160,0.3)] rounded-lg p-5 relative overflow-hidden">
+                <div aria-hidden="true" className="absolute top-0 left-0 right-0 h-0.5 bg-[#1B3FA0]" />
+                <div className="w-8 h-8 bg-[rgba(27,63,160,0.3)] rounded-md flex items-center justify-center mb-3">
+                  <svg className="w-4 h-4 stroke-[#93c5fd]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={tile.icon} />
                   </svg>
                 </div>
-                <span className="font-semibold text-gray-900 leading-tight pt-1">{item.title}</span>
+                <h3 className="text-white text-sm font-bold mb-1">{tile.name}</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">{tile.desc}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These principles guide everything we do and help us deliver exceptional security solutions every time
-            </p>
+      <div className="bg-white px-8 sm:px-12 py-14">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[#1B3FA0] text-[10px] font-extrabold tracking-[3px] uppercase mb-2">Why Choose Us</p>
+            <h2 className="text-[#0f172a] text-3xl font-black">Built on Expertise. Driven by Results.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Experience and Expertise",
-                desc: "With over 10 years of industry experience, our team delivers a high level of technical knowledge and professionalism on every project.",
-                icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-              },
-              {
-                title: "End-to-End Solutions",
-                desc: "From initial consultation and system design to installation and ongoing support, we provide complete, turnkey security solutions tailored to your environment.",
-                icon: "M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v10m0 0h10m-10 0H5m10 0v6a2 2 0 01-2 2H7a2 2 0 01-2-2v-6",
-              },
-              {
-                title: "Customized Approach",
-                desc: "We recognize that no two properties are the same. Our team works closely with each client to develop solutions that align with their specific operational needs and budget.",
-                icon: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z",
-              },
-              {
-                title: "Quality and Reliability",
-                desc: "We partner with leading manufacturers to ensure the highest quality equipment and dependable system performance. Our installations are built to be both durable and scalable.",
-                icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
-              },
-              {
-                title: "Client-Focused Service",
-                desc: "We are committed to delivering responsive, reliable service at every stage. From project execution to post-installation support, our team is available to ensure your system continues to operate at peak performance.",
-                icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z",
-              },
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-[#1B3FA0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {whyCards.map((card) => (
+              <div key={card.num} className="border border-slate-200 rounded-lg p-6 relative overflow-hidden">
+                <div aria-hidden="true" className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1B3FA0] to-[#4a90e2]" />
+                <p className="text-slate-200 text-4xl font-black leading-none mb-3" aria-hidden="true">{card.num}</p>
+                <h3 className="text-[#0f172a] text-sm font-extrabold mb-2">{card.title}</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">{card.desc}</p>
               </div>
             ))}
+            <div className="border border-[#1B3FA0] rounded-lg p-6 bg-[#f0f4ff] relative overflow-hidden">
+              <div aria-hidden="true" className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1B3FA0] to-[#4a90e2]" />
+              <p className="text-[#1B3FA0] text-4xl font-black leading-none mb-3">500+</p>
+              <h3 className="text-[#0f172a] text-sm font-extrabold mb-2">Projects Completed</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">Across NJ and NY — businesses, residential properties, and mixed-use facilities.</p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="py-20 bg-[#1B3FA0] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Secure Your Property Today</h2>
-          <p className="text-xl mb-8 text-blue-200">
-            Let us show you why businesses and homeowners across NJ and NY trust ASM Security Integrators
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-[#1B3FA0] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg"
-          >
-            Get Your Free Quote Today
-          </Link>
-        </div>
-      </section>
+      <CtaBand
+        title="Secure Your Property Today"
+        subtitle="Let us show you why businesses and homeowners across NJ and NY trust ASM Security Integrators"
+        buttonText="Get Your Free Quote →"
+        buttonHref="/contact"
+      />
     </div>
   );
 }
