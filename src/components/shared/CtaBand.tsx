@@ -13,7 +13,7 @@ export default function CtaBand({ title, subtitle, buttonText, buttonHref }: Cta
     <section className="bg-gradient-to-r from-[#1B3FA0] to-[#0f2260] px-4 sm:px-10 py-10">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
         <div>
-          <p className="text-white text-xl font-black">{title}</p>
+          <h2 className="text-white text-xl font-black">{title}</h2>
           <p className="text-white/60 text-sm mt-1.5">{subtitle}</p>
         </div>
         <Link
