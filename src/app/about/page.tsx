@@ -21,10 +21,10 @@ export default function About() {
                 We Create Secure Environments
               </h2>
               <p className="text-gray-600 mb-4">
-                ASM Security Integrators is your trusted partner for comprehensive access control, CCTV, and intercom solutions. We are a leading provider of cutting-edge security and surveillance systems, dedicated to safeguarding your business, property, and assets.
+                ASM Security Integrators is a trusted provider of advanced security solutions, specializing in access control systems, CCTV surveillance, intercom systems, and integrated building security services. We are committed to protecting businesses, residential properties, and assets through reliable, technology-driven solutions tailored to each client&apos;s needs.
               </p>
               <p className="text-gray-600 mb-6">
-                Our mission is to empower businesses and homeowners with advanced technologies, allowing them to protect what matters most. With over 10 years of industry experience, we bring unmatched expertise to every project.
+                Our mission is to design and deliver secure, efficient, and scalable security systems that enhance safety and provide peace of mind. By leveraging industry-leading technology and best practices, we help our clients maintain full control and visibility over their properties.
               </p>
               <div className="flex items-center gap-4 p-6 bg-blue-50 rounded-lg">
                 <div className="text-[#1B3FA0]">
@@ -53,6 +53,37 @@ export default function About() {
         </div>
       </section>
 
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-[#1B3FA0] uppercase tracking-wider text-sm font-semibold">What We Offer</span>
+            <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer a comprehensive range of security services, including the design, installation, configuration, and maintenance of:
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: "Access Control Systems", icon: "M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" },
+              { title: "Video Surveillance (CCTV) Systems", icon: "M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" },
+              { title: "Intercom and Entry Systems", icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" },
+              { title: "System Integration and Upgrades", icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" },
+              { title: "Troubleshooting and Repairs", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" },
+              { title: "Ongoing Support and Maintenance", icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-6 bg-blue-50 rounded-lg">
+                <div className="w-10 h-10 bg-[#1B3FA0] rounded-lg flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                  </svg>
+                </div>
+                <span className="font-semibold text-gray-900 leading-tight pt-1">{item.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -61,26 +92,31 @@ export default function About() {
               These principles guide everything we do and help us deliver exceptional security solutions every time
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Expertise & Experience",
-                desc: "Our skilled team brings over 10 years of industry experience and unmatched expertise to every project.",
+                title: "Experience and Expertise",
+                desc: "With over 10 years of industry experience, our team delivers a high level of technical knowledge and professionalism on every project.",
                 icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
               },
               {
-                title: "Comprehensive Solutions",
-                desc: "Access control, CCTV, and intercom — we cover all your security requirements efficiently and effectively.",
+                title: "End-to-End Solutions",
+                desc: "From initial consultation and system design to installation and ongoing support, we provide complete, turnkey security solutions tailored to your environment.",
                 icon: "M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v10m0 0h10m-10 0H5m10 0v6a2 2 0 01-2 2H7a2 2 0 01-2-2v-6",
               },
               {
-                title: "Customization",
-                desc: "We take a personalized approach to every project, tailoring solutions to suit your specific requirements and budget.",
+                title: "Customized Approach",
+                desc: "We recognize that no two properties are the same. Our team works closely with each client to develop solutions that align with their specific operational needs and budget.",
                 icon: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z",
               },
               {
-                title: "Excellent Customer Service",
-                desc: "Attentive and responsive service throughout the installation process and beyond. We&apos;re always here when you need us.",
+                title: "Quality and Reliability",
+                desc: "We partner with leading manufacturers to ensure the highest quality equipment and dependable system performance. Our installations are built to be both durable and scalable.",
+                icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+              },
+              {
+                title: "Client-Focused Service",
+                desc: "We are committed to delivering responsive, reliable service at every stage. From project execution to post-installation support, our team is available to ensure your system continues to operate at peak performance.",
                 icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z",
               },
             ].map((item, i) => (
