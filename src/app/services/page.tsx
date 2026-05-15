@@ -65,7 +65,7 @@ export default function Services() {
         subtitle="Comprehensive design, installation, configuration, and maintenance — from access control to full system integration."
       />
 
-      <div className="bg-[#0f172a] border-b border-white/[0.06] px-8 sm:px-12 overflow-x-auto">
+      {/* <div className="bg-[#0f172a] border-b border-white/[0.06] px-8 sm:px-12 overflow-x-auto">
         <div className="flex max-w-7xl mx-auto">
           {tabs.map((tab, i) => (
             <div
@@ -80,7 +80,7 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-[#0f172a] px-8 sm:px-12 py-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
