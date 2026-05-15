@@ -52,33 +52,35 @@ export default function About() {
         subtitle="Your trusted partner for access control, CCTV surveillance, intercom systems, and integrated building security — serving NJ & NY for over a decade."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px]">
-        <div className="bg-white px-8 sm:px-12 py-14">
-          <p className="text-[#1B3FA0] text-[10px] font-extrabold tracking-[3px] uppercase mb-2">About Our Company</p>
-          <h2 className="text-[#0f172a] text-3xl font-black mb-5">We Create Secure Environments</h2>
-          <p className="text-slate-500 text-sm leading-relaxed mb-4">
-            ASM Security Integrators is a trusted provider of advanced security solutions, specializing in access control systems, CCTV surveillance, intercom systems, and integrated building security services. We are committed to protecting businesses, residential properties, and assets through reliable, technology-driven solutions tailored to each client&apos;s needs.
-          </p>
-          <p className="text-slate-500 text-sm leading-relaxed mb-8">
-            Our mission is to design and deliver secure, efficient, and scalable security systems that enhance safety and provide peace of mind. By leveraging industry-leading technology and best practices, we help our clients maintain full control and visibility over their properties.
-          </p>
-          <div className="flex items-center gap-4 bg-[#f0f4ff] border-l-4 border-[#1B3FA0] rounded-r-lg px-5 py-4">
-            <div className="w-10 h-10 bg-[#1B3FA0] rounded-lg flex items-center justify-center shrink-0">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-slate-500 text-xs mb-1">Call us anytime</p>
-              <a href="tel:+16469381436" className="text-[#0f172a] text-xl font-black hover:text-[#1B3FA0] transition-colors">(646) 938-1436</a>
+      <div className="bg-white px-8 sm:px-12 py-14">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12 items-center">
+          <div>
+            <p className="text-[#1B3FA0] text-[10px] font-extrabold tracking-[3px] uppercase mb-2">About Our Company</p>
+            <h2 className="text-[#0f172a] text-3xl font-black mb-5">We Create Secure Environments</h2>
+            <p className="text-slate-500 text-sm leading-relaxed mb-4">
+              ASM Security Integrators is a trusted provider of advanced security solutions, specializing in access control systems, CCTV surveillance, intercom systems, and integrated building security services. We are committed to protecting businesses, residential properties, and assets through reliable, technology-driven solutions tailored to each client&apos;s needs.
+            </p>
+            <p className="text-slate-500 text-sm leading-relaxed mb-8">
+              Our mission is to design and deliver secure, efficient, and scalable security systems that enhance safety and provide peace of mind. By leveraging industry-leading technology and best practices, we help our clients maintain full control and visibility over their properties.
+            </p>
+            <div className="flex items-center gap-4 bg-[#f0f4ff] border-l-4 border-[#1B3FA0] rounded-r-lg px-5 py-4">
+              <div className="w-10 h-10 bg-[#1B3FA0] rounded-lg flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-slate-500 text-xs mb-1">Call us anytime</p>
+                <a href="tel:+16469381436" className="text-[#0f172a] text-xl font-black hover:text-[#1B3FA0] transition-colors">(646) 938-1436</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bg-[#1B3FA0] flex flex-col items-center justify-center text-center px-8 py-14 min-h-[300px]">
-          <p className="text-white text-8xl font-black leading-none mb-2">10+</p>
-          <p className="text-white text-lg font-bold mb-3">Years of Experience</p>
-          <p className="text-white/60 text-sm max-w-[200px] leading-relaxed">Over a decade securing businesses and homes across New Jersey and New York</p>
-          <span className="mt-5 inline-block bg-white/15 border border-white/30 text-white text-xs font-semibold px-4 py-1.5 rounded-full">✓ Trusted by 300+ Clients</span>
+          <div className="bg-[#1B3FA0] rounded-2xl flex flex-col items-center justify-center text-center px-8 py-14">
+            <p className="text-white text-8xl font-black leading-none mb-2">10+</p>
+            <p className="text-white text-lg font-bold mb-3">Years of Experience</p>
+            <p className="text-white/60 text-sm max-w-[200px] leading-relaxed">Over a decade securing businesses and homes across New Jersey and New York</p>
+            <span className="mt-5 inline-block bg-white/15 border border-white/30 text-white text-xs font-semibold px-4 py-1.5 rounded-full">✓ Trusted by 300+ Clients</span>
+          </div>
         </div>
       </div>
 

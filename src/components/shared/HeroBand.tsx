@@ -6,10 +6,6 @@ interface HeroBandProps {
 }
 
 export default function HeroBand({ eyebrow, title, accentWord, subtitle }: HeroBandProps) {
-  const accentIndex = accentWord ? title.indexOf(accentWord) : -1;
-  const before = accentIndex >= 0 ? title.slice(0, accentIndex) : title;
-  const after = accentIndex >= 0 ? title.slice(accentIndex + accentWord!.length) : "";
-
   return (
     <section className="bg-gradient-to-br from-[#1B3FA0] to-[#0f2260] py-14 px-4 sm:px-10 relative overflow-hidden">
       <div aria-hidden="true" className="absolute right-0 top-0 w-64 h-64 border-2 border-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -17,13 +13,8 @@ export default function HeroBand({ eyebrow, title, accentWord, subtitle }: HeroB
       <div className="max-w-7xl mx-auto relative z-10">
         <p className="text-[#93c5fd] text-[11px] font-extrabold tracking-[3px] uppercase mb-3">{eyebrow}</p>
         <h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-4">
-          {accentWord && accentIndex >= 0 ? (
-            <>
-              {before}
-              <span className="text-[#93c5fd]">{accentWord}</span>
-              {after}
-            </>
-          ) : title}
+          {title}
+          {accentWord && <span className="text-[#93c5fd]">{accentWord}</span>}
         </h1>
         <div aria-hidden="true" className="w-14 h-1 bg-[#93c5fd] rounded mb-4" />
         <p className="text-white/65 text-sm max-w-lg leading-relaxed">{subtitle}</p>
